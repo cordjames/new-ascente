@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-q7jy_q2_tvtp@u%3%g17-y6+%ynbu1dsuwff%*w=pc!*u3i9l4
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '*'
+    '127.0.0.1', '.vercel.app',
 ]
 
 
@@ -153,5 +153,6 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'sascente00@gmail.com'
 EMAIL_HOST_PASSWORD = 'kbgi ssed nwlf txmr'
 
+WSGI_APPLICATION = 'ascente.wsgi.app'
 
 
