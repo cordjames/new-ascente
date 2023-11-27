@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "ascente/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "ascente/wsgi.py"
+      }
+    ]
+}
