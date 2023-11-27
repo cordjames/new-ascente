@@ -153,6 +153,6 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'sascente00@gmail.com'
 EMAIL_HOST_PASSWORD = 'kbgi ssed nwlf txmr'
 
-WSGI_APPLICATION = 'ascente.wsgi.app'
+# WSGI_APPLICATION = 'ascente.wsgi.app'
 
 
