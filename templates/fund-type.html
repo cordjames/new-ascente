@@ -1,0 +1,91 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block title %} Fund Type {% endblock title %}
+
+{% block content %}
+<div class="container p-3" style="justify-content: center; align-items: center; margin: auto;">
+    <div class="my-3 text-center">
+        <h1 style="text-align: center; font-weight: bold; display: inline-block;
+    border-bottom: 2px solid #6658ea;
+    width: 30%;
+    margin: auto;" >FUND TYPES</h1>
+    </div>
+    <div class="container mt-4">
+        <!-- Bootstrap grid with three rows and two divs each -->
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <!-- Content for the first div in row 1 -->
+                <img src="{% static 'images/conventional.png' %}" class="card-img-top" alt="Image">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 mb-4">
+            <div class="card">
+              <div class="card-body" style="min-height: 282px;">
+                <!-- Content for the second div in row 1 -->
+                <h3>Conventional Funds</h3>
+                <p>
+                    Conventional funds are an investment scheme that pools money from many investors who share the same financial objectives, preferred investment strategy and risk tolerance levels. The pooled money is then invested by a professional fund manager into a diversified portfolio of authorized investments approved by the Securities Commission Malaysia.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <!-- Content for the first div in row 2 -->
+                <img src="{% static 'images/shariah.png' %}" class="card-img-top" alt="Image">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 mb-4">
+            <div class="card">
+              <div class="card-body" style="min-height: 282px;">
+                <!-- Content for the second div in row 2 -->
+                <h3>Shariah-Compliant Funds</h3>
+                <p>
+                    A Shariah-compliant fund is a collective investment fund that offer investors the opportunity to invest in a diversified portfolio of Shariah-Compliant shares and fixed income securities, as well as other Shariah-compliant money market instruments. These funds are operating in compliance with Shariah principles.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <!-- Content for the first div in row 3 -->
+                <img src="{% static 'images/wholesale.png' %}" class="card-img-top" alt="Image">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 mb-4">
+            <div class="card">
+              <div class="card-body" style="min-height: 306px; padding: auto;">
+                <!-- Content for the second div in row 3 -->
+                <h3>Wholesale Funds</h3>
+                <p>
+                    Our Wholesale Funds are created exclusively for Corporate clients who have unique investment objectives and require higher returns in their cash reserves.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="center-container" style="display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 200px;">
+          <a href="{% url 'unit-fund' %}">
+            <button type="button" class="btn btn-primary">View Unit Trust Fund</button>
+          </a>
+          </div>
+        </div>
+      </div>
+</div>
+{% endblock content %}

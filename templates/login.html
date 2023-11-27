@@ -1,0 +1,31 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block title %} User Login {% endblock title %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center my-5">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title" style="text-align: center;">Sign In</h5>
+      <form method="post" action="{% url 'sign-in' %}">
+        {% csrf_token %}
+        
+        <!-- Email input -->
+        <div data-mdb-input-init class="form-outline my-4 pt-4">
+            <input type="email" id="form1Example1" class="form-control" name="username" style="background-color: #f5f5f5;" required />
+            <label class="form-label">Email address</label>
+        </div>
+      
+        <!-- Password input -->
+        <div data-mdb-input-init class="form-outline my-4 pt-4">
+            <input type="password" id="form1Example2" class="form-control" name="password" style="background-color: #f5f5f5;" required />
+            <label class="form-label">Password</label>
+        </div> 
+    
+        <!-- Submit button -->
+        <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block">Sign in</button>
+    </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,48 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block title %} EPF Members’ Investment Scheme {% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="my-3 text-center">
+        <h1 style="text-align: center; font-weight: bold; display: inline-block;
+    border-bottom: 2px solid #6658ea;
+    width: 60%;
+    margin: auto;" >EPF Members’ Investment Scheme</h1>
+    </div>
+
+    <p style="text-align: center">
+        Saving for your retirement has never been easier. The Employee Provident Fund Members’ Investment Scheme, also known as the EPF MIS is an ongoing initiative that encourages eligible members to strengthen and diversify their retirement portfolio by means of using a pre-determined percentage of their savings from EPF Account 1 to invest with appointed fund management institutions.
+    </p>
+    <div class="row mt-3 ">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/epf/below-55.png' %}" class="card-img-top" alt="Chicago Skyscrapers"/>
+                <div class="card-body">
+                  <h5 class="card-title">Below 55 years of age</h5>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/epf/saving.png' %}" class="card-img-top" alt="Chicago Skyscrapers"/>
+                <div class="card-body">
+                  <h5 class="card-title">Have sufficient savings with the EPF</h5>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/epf/application.png' %}" class="card-img-top" alt="Chicago Skyscrapers"/>
+                <div class="card-body">
+                  <h5 class="card-title">Application via counter/FMI's agent or I-Akaun (Member)</h5>
+                </div>
+              </div>
+        </div>
+      </div>
+      <p style="text-align: center">
+        Members aged 55 years and above, have the option to invest part of their savings in Akaun 55 (otherwise known as Akaun Emas). This withdrawal is not part of the Members Investment Scheme. Applications for such withdrawal, can be made through I-Akaun (Member).
+    </p>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,56 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block title %} Coporate Services {% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="my-3 text-center">
+        <h1 style="text-align: center; font-weight: bold; display: inline-block;
+    border-bottom: 2px solid #6658ea;
+    width: 60%;
+    margin: auto;" >Corporate & Institutional Solutions</h1>
+    </div>
+
+    <p style="text-align: center;">
+        We understand that differing investment objectives require tailored solutions which consider a client’s specific risk and return appetite, tolerance and investment horizons.
+    </p>
+    <p style="text-align: center;">
+        Allow us to help you achieve your financial goals with our robust and broad spectrum of products and services.
+    </p>
+    <div class="row mt-3 ">
+        <div class="col-md-6">
+            <div class="card" >
+                <img src="{% static 'images/coporate/cash-management.png' %}" class="card-img-top" alt="Chicago Skyscrapers"/>
+                <div class="card-body">
+                  <h5 class="card-title">Cash Management Solutions</h5>
+                  <p class="card-text">We provide comprehensive liquidity management solutions to effectively meet the needs of our institutional and corporate investors.</p>
+                </div>
+                <ul class="list-group list-group-light list-group-small">
+                  <li class="list-group-item px-4">Tax-exempt</li>
+                  <li class="list-group-item px-4">Accessibility and liquidity</li>
+                  <li class="list-group-item px-4">Safety of capital</li>
+                  <li class="list-group-item px-4">Yield enhancement</li>
+                  <li class="list-group-item px-4">Regular income distribution</li>
+                </ul>
+              </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <img src="{% static 'images/coporate/portfolio.png' %}" class="card-img-top" alt="Chicago Skyscrapers"/>
+                <div class="card-body">
+                  <h5 class="card-title">Discretionary Portfolios</h5>
+                  <p class="card-text">Tailored portfolios comprising a selection of assets are monitored closely by our professional fund management team to navigate market uncertainties. Your portfolio can be a selection of securities from any of the asset classes below:</p>
+                </div>
+                <ul class="list-group list-group-light list-group-small">
+                  <li class="list-group-item px-4">Equity</li>
+                  <li class="list-group-item px-4">Fixed Income</li>
+                  <li class="list-group-item px-4">Mixed Assets</li>
+                  <li class="list-group-item px-4">Sukuk</li>
+                  <li class="list-group-item px-4">REITs</li>
+                </ul>
+              </div>
+        </div>
+      </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,110 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block title %} One PRS {% endblock title %}
+
+{% block content %}
+<div class="container py-4 px-3" style="justify-content: center; align-items: center; margin: auto;">
+    <div class="my-3 text-center">
+        <h1 style="text-align: center; font-weight: bold; display: inline-block;
+    border-bottom: 2px solid #6658ea;
+    width: 40%;
+    margin: auto;" >ONE PRS BY ASCENTE</h1>
+    </div>
+
+    <p style="text-align: center;">Retirement is the next stage in life where one relishes in the accomplishment of their dreams and curiosities. This is also where the money we have put away for savings and investments in our youth, begins to flex their muscles in order to securely see us through our golden years.
+
+        Learn how OnePRS by <span style="color: #6658ea;"><strong>ASCENTE</strong></span> can help you achieve that.</p>
+    
+    <h5 style="text-align: center;">Private Retirement Schemes – At a Glance</h5>
+
+    <div class="container mt-4 d-flex justify-content-center">
+        <!-- Single-row Bootstrap container -->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card" style="width: 30rem;">
+                <img src="{% static 'images/what-is.png' %}" class="card-img-top" alt="What it is"/>
+                <div class="card-body">
+                  <h5 class="card-title">What is it?</h5>
+                </div>
+                <ul class="list-group list-group-light list-group-small" style="min-height: 341px;">
+                  <li class="list-group-item px-4">A voluntary retirement savings scheme offered by private sector fund providers licensed and approved by the Securities Commission Malaysia.</li>
+                  <li class="list-group-item px-4">A tax-efficient vehicle for individuals to save for retirement.</li>
+                  <li class="list-group-item px-4">To complement your mandatory retirement savings scheme.</li>
+                </ul>
+              </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card" style="width: 30rem;">
+                <img src="{% static 'images/why-do-you-need.png' %}" class="card-img-top" alt="why you need it"/>
+                <div class="card-body">
+                  <h5 class="card-title">Why do you need it?</h5>
+                </div>
+                <ul class="list-group list-group-light list-group-small" >
+                  <li class="list-group-item px-4">Enables additional savings for your retirement.</li>
+                  <li class="list-group-item px-4">Protects against inflation and provides adequate savings upon retirement.</li>
+                  <li class="list-group-item px-4">Allows individuals or employers to voluntarily contribute into a retirement savings scheme.</li>
+                  <li class="list-group-item px-4">Allows employees of a company and self-employed individuals to voluntarily contribute into a retirement savings scheme.</li>
+                  <li class="list-group-item px-4">Ultimately, to allow you to have the quality of life you have always wanted at retirement!</li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+
+    <h3 class="mt-4" style="text-align: center;">The PRS Framework</h3>
+    <p class="mt-3" style="text-align: center;">PRS is a regulated capital market services activity that comes under the supervision of the Securities Commission Malaysia, who ensures the proper functioning of the PRS industry and investor protection through regulating the following four intermediaries.</p>
+
+    <div class="container mt-4">
+        <!-- Bootstrap grid with a 2x2 layout -->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Private Pension Administrator Malaysia</h5>
+                  </div>
+                  <ul class="list-group list-group-light list-group-small" style="min-height: 200px;">
+                    <li class="list-group-item px-4">A one-stop center to govern the PRS by acting as a resource center for information relating to the PRS industry and keeping records of all transactions of monies paid or received.</li>
+                  </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">PRS Providers</h5>
+                  </div>
+                  <ul class="list-group list-group-light list-group-small" style="min-height: 200px;">
+                    <li class="list-group-item px-4">Licensed and approved by the Securities Commission.</li>
+                    <li class="list-group-item px-4">Offer a range of PRS retirement funds for members to choose to invest in.</li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+    
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <div class="card" >
+                <div class="card-body">
+                    <h5 class="card-title">Scheme Trustee</h5>
+                  </div>
+                  <ul class="list-group list-group-light list-group-small" style="min-height: 200px;">
+                    <li class="list-group-item px-4">To safeguard members’ contributions, the asset of each PRS will be segregated from the PRS Providers and held by an independent Scheme Trustee under a trust.</li>
+                    <!-- <li class="list-group-item px-4">Offer a range of PRS retirement funds for members to choose to invest in.</li> -->
+                  </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">PRS Distributors and Consultants</h5>
+                  </div>
+                  <ul class="list-group list-group-light list-group-small" style="min-height: 200px;">
+                    <li class="list-group-item px-4">PRS Distributors include financial institutions who enter into agreement with PRS Providers to market and distribute PRS.</li>
+                    <li class="list-group-item px-4">OnePRS Scheme Consultants are individuals who are registered with the Federation of Investment Managers Malaysia through <span style="color: #6658ea;"><strong>ASCENTE</strong></span> Investors Berhad to market and distribute OnePRS by <span style="color: #6658ea;"><strong>ASCENTE</strong></span>.</li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</div>
+{% endblock content %}

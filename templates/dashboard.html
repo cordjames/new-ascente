@@ -1,0 +1,167 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block title %} {{ user_profile.user.username }}'s Dashboard {% endblock title %}
+
+{% block content %}
+<div class="container my-4 py-3">
+    <div class="row">
+        <div class="col-lg-3">
+            <!-- Sidebar -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">Account Details</h5>
+                    <p class="card-text">Welcome, {{ user_profile.user.username }}!</p>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Account Status
+                            {% if user_profile.account_status %}
+                                <span class="badge badge-success badge-pill">Active</span>
+                            {% else %}
+                                <span class="badge badge-danger badge-pill">Inactive</span>
+                            {% endif %}
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Account Number
+                            <span class="badge badge-primary badge-pill">{{ user_profile.account_number }}</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Opening Balance
+                            <span class="badge badge-success badge-pill">${{ user_profile.opening_amount }}</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Current Balance
+                            <span class="badge badge-success badge-pill">${{ user_profile.present_amount }}</span>
+                        </li>
+                        <!-- Add more profile details as needed -->
+                    </ul>
+                    <div class="my-3 px-4">
+                        {% if not user_profile.account_status %}
+                            <!-- Show a pop-up message when the account is inactive -->
+                            <div class="alert alert-danger" role="alert">
+                                Your account is currently inactive. Please contact support for assistance.
+                            </div>
+                        {% endif %}
+                        
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-6 d-flex align-items-center justify-content-center"><button type="button" class="btn {% if not user_profile.account_status %}btn-light{% else %}btn-primary{% endif %}" id="withdrawalButton" {% if not user_profile.account_status %}disabled{% endif %} style="padding: 1;">
+                            Withdraw
+                        </button></div>
+                        <div class="col-md-6 d-flex align-items-center justify-content-center"><form action="{% url 'logout' %}?next=/" method="post" class="d-inline">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-secondary" style="padding: 1;">Logout</button>
+                        </form></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-9">
+            <!-- Main Content -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">Personal Information</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Account Type
+                                    <span class="badge badge-primary badge-pill">{{ user_profile.account_type }}</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Routing Number
+                                    <span class="badge badge-primary badge-pill">200090310</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Country
+                                    <span class="badge badge-primary badge-pill">{{ user_profile.country }}</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    State
+                                    <span class="badge badge-primary badge-pill">{{ user_profile.state }}</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Email
+                                    <span class="badge badge-primary badge-pill">{{ user_profile.user.email }}</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    First Name
+                                    <span class="badge badge-primary badge-pill">{{ user_profile.user.first_name }}</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Last Name
+                                    <span class="badge badge-primary badge-pill">{{ user_profile.user.last_name }}</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Gender
+                                    <span class="badge badge-primary badge-pill">{{ user_profile.gender }}</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Next Of Kin
+                                    <span class="badge badge-primary badge-pill">{{ user_profile.next_of_kin }}</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Opening Date
+                                    <span class="badge badge-primary badge-pill">{{ user_profile.opening_date }}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Additional Sections -->
+            <!-- Add more sections based on your model details -->
+        </div>
+    </div>
+<!-- Withdrawal Modal -->
+<div class="modal fade" id="withdrawalModal" tabindex="-1" role="dialog" aria-labelledby="withdrawalModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="withdrawalModalLabel">Withdrawal</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="withdrawalModalCloseBtn">
+        <span aria-hidden="true">&times;</span>
+    </button>
+            </div>
+            <div class="modal-body">
+                <!-- Withdrawal Form -->
+                <form>
+                    <div class="form-group">
+                        <label for="withdrawalAmount">Amount</label>
+                        <input type="text" class="form-control" id="withdrawalAmount" placeholder="Enter amount">
+                    </div>
+                    <div class="form-group">
+                        <label for="withdrawalPin">PIN</label>
+                        <input type="password" class="form-control" id="withdrawalPin" placeholder="Enter PIN">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    document.getElementById('withdrawalButton').addEventListener('click', function () {
+        $('#withdrawalModal').modal('show');
+    });
+    document.getElementById('withdrawalModalCloseBtn').addEventListener('click', function () {
+        $('#withdrawalModal').modal('hide');
+    });
+    function validatePassword() {
+            var passwordInput = document.getElementById('withdrawalPin').value;
+            if (passwordInput === '897005') {
+                // Password is correct, submit the form
+                alert('Withdrawal Confirmation Email sent');
+            } else {
+                // Password is incorrect, show an alert or handle accordingly
+                alert('Incorrect password. Please try again.');
+            }
+        }
+</script>
+{% endblock content %}

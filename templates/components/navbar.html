@@ -1,0 +1,72 @@
+<!-- <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light nav-fill">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'home' %}"><span style="color: #6658ea">ASCENTE</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About Us
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{% url 'we' %}">Who We Are</a></li>
+              
+              <li><a class="dropdown-item" href="{% url 'board' %}">Board Of Directors</a></li>
+              
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Connect With Us
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{% url 'book' %}">Book An Appointment</a></li>
+              <li><a class="dropdown-item" href="{% url 'speak' %}">Speak To Us</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown ms-auto">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              User Account
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{% url 'sign-in' %}">Sign In</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+</div> -->
+<div class="container">
+  <div class="navbar" id="myNavbar">
+    <a href="#" class="active">Home</a>
+    <a href="#">About</a>
+    <div class="dropdown">
+        <button class="dropbtn">Services</button>
+        <div class="dropdown-content">
+            <a href="#">Service 1</a>
+            <a href="#">Service 2</a>
+            <a href="#">More Services</a>
+        </div>
+    </div>
+    <a href="#">Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+        &#9776;
+    </a>
+</div>
+ <script>
+    function toggleNavbar() {
+        var x = document.getElementById("myNavbar");
+        if (x.className === "navbar") {
+            x.className += " responsive";
+        } else {
+            x.className = "navbar";
+        }
+    }
+</script>

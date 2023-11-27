@@ -1,0 +1,95 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block title %} One ETF {% endblock title %}
+
+{% block content %}
+<div class="container py-4 px-3" style="justify-content: center; align-items: center; margin: auto;">
+    <div class="my-3 text-center">
+        <h1 style="text-align: center; font-weight: bold; display: inline-block;
+    border-bottom: 2px solid #6658ea;
+    width: 50%;
+    margin: auto;" >ONE ETF BY ASCENTE</h1>
+
+    <p class="m-3">An exchange-traded fund is an open-index tracking fund listed and traded in real time on a stock exchange. It is made up of a collection of securities that tracks an underlying index. As ETFs are bought and sold on an exchange like shares, ETFs are priced and traded throughout the day.</p>
+
+    <p>ETFs have the combined benefits of stocks, unit trusts and index funds.</p>
+    </div>
+
+
+    <div class="container mt-4">
+        <!-- Bootstrap grid with a 3x3 layout -->   
+        <div class="row mt-4">
+          <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/affordability.png' %}" class="card-img-top"/>
+                <div class="card-body">
+                  <h5 class="card-title">Affordability</h5>
+                  <p class="card-text">
+                    For a small sum of money, you are able to invest in your desired securities investment.</p>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/liquidity.png' %}" class="card-img-top"/>
+                <div class="card-body">
+                  <h5 class="card-title">Liquidity</h5>
+                  <p class="card-text">
+                    Investors can redeem units easily and obtain cash by the 3rd market day after trade date.</p>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/transparency.png' %}" class="card-img-top"/>
+                <div class="card-body">
+                  <h5 class="card-title">Transparency</h5>
+                  <p class="card-text">
+                    You have a first-hand view of what you are buying and the progress made by your investment.</p>
+                </div>
+              </div>
+          </div>
+        </div>
+    
+        <div class="row mt-4">
+          <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/low-cost.png' %}" class="card-img-top"/>
+                <div class="card-body">
+                  <h5 class="card-title">Low cost</h5>
+                  <p class="card-text">
+                    Low management fee and zero upfront fee.</p>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/flexibility.png' %}" class="card-img-top"/>
+                <div class="card-body">
+                  <h5 class="card-title">Flexibility</h5>
+                  <p class="card-text">
+                    Buy and sell during trading hours just like a stock.</p>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/easy-access.png' %}" class="card-img-top"/>
+                <div class="card-body">
+                  <h5 class="card-title">Easy access to diversification</h5>
+                  <p class="card-text">
+                    Own a basket of securities with a single trade.</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <h4 class="mt-5 mb-3" style="text-align: center;">What are leveraged and inverse ETFs?</h4>
+      <p style="text-align: center;">Leveraged ETFs deliver a multiple of the returns to a particular index on a daily basis. For example, if an index increases by 2%, a 2x leveraged ETF will increase by 4%. In comparison, inverse ETFs, deliver the opposite returns of an index, whereby if an index increases by 2%, the inverse ETF will decrease by -2%.</p>
+
+      <p style="text-align: center;">Appropriate for active traders in the stock market, inverse ETFs are suitable for investors with a bearish view of the market, whereas leveraged ETFs are suitable for those with a bullish view of the market. Both ETFs are for short term (one-day) trading.</p>
+</div>
+{% endblock content %}
+
+
+

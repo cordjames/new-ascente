@@ -1,0 +1,80 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block title %} Private Wealth {% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="my-3 text-center">
+        <h1 style="text-align: center; font-weight: bold; display: inline-block;
+    border-bottom: 2px solid #6658ea;
+    width: 60%;
+    margin: auto;" >Private Wealth</h1>
+    </div>
+
+    <p style="text-align: center">
+        We provide careful strategic planning through a variety of flexible financial planning solutions backed by Kenanga Group’s expertise and experience as well as our network of established product partners in the market in order to meet the sophisticated needs of today’s investors.
+    </p>
+    <p class="mt-2" style="text-align: center"><strong>We believe we are a step above the rest because of:</strong></p>
+    <div class="row mt-3 ">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/private/unique-investment.png' %}" class="card-img-top" alt="Chicago Skyscrapers"/>
+                <div class="card-body">
+                  <h5 class="card-title">Unique Investment Proposition</h5>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/private/personalisation.png' %}" class="card-img-top" alt="Chicago Skyscrapers"/>
+                <div class="card-body">
+                  <h5 class="card-title">Personalisation with a wealth of experience</h5>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/private/tailored-service.png' %}" class="card-img-top" alt="Chicago Skyscrapers"/>
+                <div class="card-body">
+                  <h5 class="card-title">Tailored services for optimum results</h5>
+                </div>
+              </div>
+        </div>
+      </div>
+    <div class="row mt-3 ">
+        <div class="col-md-6">
+            <div class="card" >
+                <img src="{% static 'images/private/treasury.png' %}" class="card-img-top" alt="Chicago Skyscrapers"/>
+                <div class="card-body">
+                  <h5 class="card-title">Treasury</h5>
+                </div>
+                <ul class="list-group list-group-light list-group-small">
+                  <li class="list-group-item px-4">Primary sales & syndication for Sukuk / Bonds</li>
+                  <li class="list-group-item px-4">FOREX products for Spot and Forward Transactions</li>
+                  <li class="list-group-item px-4">Structured yield-enhancement products</li>
+                  <li class="list-group-item px-4">Yield enhancement</li>
+                  <li class="list-group-item px-4">Money Market Instruments: Term Deposits, NIDs and Repurchase Agreement.</li>
+                </ul>
+              </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <img src="{% static 'images/private/wealth-management.png' %}" class="card-img-top" alt="Chicago Skyscrapers"/>
+                <div class="card-body">
+                  <h5 class="card-title">Wealth Management</h5>
+                  <p class="card-text">Tailored portfolios comprising a selection of assets are monitored closely by our professional fund management team to navigate market uncertainties. Your portfolio can be a selection of securities from any of the asset classes below:</p>
+                </div>
+                <ul class="list-group list-group-light list-group-small">
+                  <li class="list-group-item px-4">Unit Trusts</li>
+                  <li class="list-group-item px-4">Private Retirement Schemes</li>
+                  <li class="list-group-item px-4">Dual Currency Investments</li>
+                  <li class="list-group-item px-4">Bonds</li>
+                  <li class="list-group-item px-4">Money Markets</li>
+                  <li class="list-group-item px-4">Insurance, etc</li>
+                </ul>
+              </div>
+        </div>
+      </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,32 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+
+{% block content %}
+
+{% include 'components/hero.html' %}
+<div class="container">
+    {% include 'components/banner.html' %}
+
+    {% include 'components/imageGridHome.html'%}
+    <div class="my-3 text-center">
+        <h3 style=" display: inline-block;
+        border-bottom: 2px solid #6658ea;
+        width: 30%;
+        margin: auto;">Our Investment Solutions</h3>
+    </div>
+    {% include 'components/homeInvestmentGrid.html'%}
+    <div class="my-3 text-center">
+        <h3 style=" display: inline-block;
+        border-bottom: 2px solid #6658ea;
+        width: 30%;
+        margin: auto;">Our Financial Services</h3>
+    </div>
+    {% include 'components/financial-services.html'%}
+</div>
+
+   
+   
+{% endblock content %}
+
+

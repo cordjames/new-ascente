@@ -1,0 +1,41 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block title %} Available Funds {% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <div class="my-3 text-center">
+            <h1 style="text-align: center; font-weight: bold; display: inline-block;
+        border-bottom: 2px solid #6658ea;
+        width: 40%;
+        margin: auto;" >UNIT AND PRS FUNDS</h1>
+        </div>
+        <table class="table table-bordered border-primary table-striped">
+            <thead>
+                <tr>
+                  <th scope="col">Fund Name</th>
+                  <th scope="col">Classification</th>
+                  <th scope="col">Fund Category</th>
+                  <th scope="col">Fund Type</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Nav</th>
+                  <th scope="col">Daily Change</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for fund in funds %}
+                    <tr>
+                        <th>{{ fund.name }}</th>
+                        <td>{{ fund.class }}</td>
+                        <td>{{ fund.cat }}</td>
+                        <td>{{ fund.type }}</td>
+                        <td>{{ fund.date }}</td>
+                        <td>{{ fund.nav }}</td>
+                        <td>{{ fund.value }}</td>
+                    </tr>
+                {% endfor %}
+              </tbody>
+        </table>
+        
+    </div>
+{% endblock content %}

@@ -1,0 +1,93 @@
+{% load static %}
+<div class="container">
+
+    <div class="row no-gutters">
+      <div class="col-md-6 col-sm-6">
+        <div style="position: relative; overflow: hidden;">
+            <img src="{% static 'images/coporate.jpg' %}" alt="Your Image" style="width: 100%; height: auto; filter: brightness(0.7)">
+            <h4 class="p-1" style="position: absolute; top: 85%; right: 2%; transform: translate(0, -50%); z-index: 1; color: white;">Corporate & Institutional Solutions</h4>
+            <div class="p-3" style="position: absolute; top: 3%; left: 3%; width: 90%; height: 70%; background: #6658ea; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0">
+              <p style="color: #ffffff; font-size: small;">Tailored solutions for investors seeking to strategically diversify their exposure by providing a robust and broad spectrum of products and services.</p>
+              <a href="{% url 'coporate' %}" style="color: #ffffff;">
+                Learn More
+                <span style="display: inline-block; margin-left: 5px;">&#8594;</span>
+              </a>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div style="position: relative; overflow: hidden;">
+            <img src="{% static 'images/personal-wealth.jpg' %}" alt="Your Image" style="width: 100%; height: auto; filter: brightness(0.7)">
+            <h4 class="p-1" style="position: absolute; top: 85%; right: 2%; transform: translate(0, -50%); z-index: 1; color: white;">Private Wealth</h4>
+            <div class="p-3" style="position: absolute; top: 3%; left: 3%; width: 90%; height: 70%; background: #6658ea; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0">
+              <p style="color: #ffffff; font-size: small;">With a comprehensive range of investment management tools and products, our Private Wealth services are designed to fulfill the dynamic needs of today’s sophisticated investors.</p>
+              <a href="{% url 'wealth' %}" style="color: #ffffff;">
+                Learn More
+                <span style="display: inline-block; margin-left: 5px;">&#8594;</span>
+              </a>
+            </div>
+          </div>
+      </div>
+      <!-- Bootstrap grid classes for different screen sizes -->
+      <!--  -->
+      
+      <!-- <div class="col-md-4 col-sm-6">
+        <div style="position: relative; overflow: hidden;">
+            <img src="{% static 'images/other-services.jpg' %}" alt="Your Image" style="width: 100%; height: auto; filter: brightness(0.7)">
+            <h4 class="p-1" style="position: absolute; top: 85%; right: 2%; transform: translate(0, -50%); z-index: 1; color: white;">AMP Plus Services</h4>
+            <div class="p-3" style="position: absolute; top: 3%; left: 3%; width: 90%; height: 70%; background: #6658ea; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0">
+              <p style="color: #ffffff; font-size: small;">
+                Actively managed portfolio services using tactical asset allocation strategies for consistent performance.</p>
+              <a href="#" style="color: #ffffff;">
+                Learn More
+                <span style="display: inline-block; margin-left: 5px;">&#8594;</span>
+              </a>
+            </div>
+          </div>
+      </div> -->
+      <div class="col-md-4 col-sm-6">
+        <div style="position: relative; overflow: hidden;">
+            <img src="{% static 'images/financial-planning.jpg' %}" alt="Your Image" style="width: 100%; height: auto; filter: brightness(0.7)">
+            <h4 class="p-1" style="position: absolute; top: 85%; right: 2%; transform: translate(0, -50%); z-index: 1; color: white;">Financial Planning</h4>
+            <div class="p-3" style="position: absolute; top: 3%; left: 3%; width: 90%; height: 70%; background: #6658ea; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0">
+              <p style="color: #ffffff; font-size: small;">
+                Our fundamental approach to financial planning allows investors to plan ahead for future life goals and to hedge against unexpected obstacles along the way.</p>
+              <a href="{% url 'planning' %}" style="color: #ffffff;">
+                Learn More
+                <span style="display: inline-block; margin-left: 5px;">&#8594;</span>
+              </a>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div style="position: relative; overflow: hidden;">
+            <img src="{% static 'images/invest-scheme.jpg' %}" alt="Your Image" style="width: 100%; height: auto; filter: brightness(0.7)">
+            <h4 class="p-1" style="position: absolute; top: 85%; right: 2%; transform: translate(0, -50%); z-index: 1; color: white;">EPF Members’ Investment Scheme</h4>
+            <div class="p-3" style="position: absolute; top: 3%; left: 3%; width: 90%; height: 70%; background: #6658ea; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0">
+              <p style="color: #ffffff; font-size: small;">
+                Get your EPF savings to work harder for you.</p>
+              <a href="{% url 'member' %}" style="color: #ffffff;">
+                Learn More
+                <span style="display: inline-block; margin-left: 5px;">&#8594;</span>
+              </a>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div style="position: relative; overflow: hidden;">
+            <img src="{% static 'images/wealth-management.jpg' %}" alt="Your Image" style="width: 100%; height: auto; filter: brightness(0.7)">
+            <h4 class="p-1" style="position: absolute; top: 85%; right: 2%; transform: translate(0, -50%); z-index: 1; color: white;">Wealth Management</h4>
+            <div class="p-3" style="position: absolute; top: 3%; left: 3%; width: 90%; height: 70%; background: #6658ea; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0">
+              <p style="color: #ffffff; font-size: small;">
+                Achieve financial independence by growing your existing portfolio to ensure capital appreciation.</p>
+              <a href="{% url 'wealth-man' %}" style="color: #ffffff;">
+                Learn More
+                <span style="display: inline-block; margin-left: 5px;">&#8594;</span>
+              </a>
+            </div>
+          </div>
+      </div>
+      
+      
+    </div>
+  </div>

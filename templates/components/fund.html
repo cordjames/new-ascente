@@ -1,0 +1,47 @@
+{% load static %}
+<!-- Banner section -->
+<section class="banner mt-5">
+    <!-- Image background for desktop -->
+    <div class="banner-img"></div>
+
+    <!-- Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-6">
+          <h1>Kenanga Islamic Asia Pacific
+            (ex Japan) Total Return Fund</h1>
+          <p>View Asia Pacific’s dynamic growth through a Shariah lens with an investment strategy that transcends traditional constraints and benchmarks. Invest in potential guided by ideals.
+            Invest in you.</p>
+            <button type="button" class="btn btn-outline-dark">View Fund</button>
+          <!-- Add additional content as needed -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Custom styles for the banner */
+    .banner {
+      position: relative;
+      background-color: #6658ea; /* Fallback color in case the image is unavailable */
+      color: #ffffff;
+      text-align: center;
+      padding: 100px 0; /* Adjust the padding as needed */
+    }
+
+    .banner-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: url('{% static "images/stocks.jpg" %}') center center/cover no-repeat; /* Replace 'your-image.jpg' with your actual image URL */
+      z-index: -1;
+    }
+    @media (max-width: 768px) {
+      /* Adjust styles for smaller screens */
+      .banner-img {
+        width: 100%;
+      }
+    }
+  </style>
