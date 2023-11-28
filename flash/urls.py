@@ -25,7 +25,6 @@ urlpatterns = [
     path("one-rps", OneRpsPage.as_view(), name="one-rps"),
     path("one-etf", OneEtfPage.as_view(), name="one-etf"),
     path("unit-funds", unit_fund_view, name="unit-fund"),
-    path("unit-funds", unit_fund_view, name="blog-list"),
     path("funds-list", unit_fund_view, name="list-funds"),
     path("alt-invest", AltInvestPage.as_view(), name="alt-invest"),
     path("coporate", CoporatePage.as_view(), name="coporate"),

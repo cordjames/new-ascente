@@ -1,6 +1,6 @@
 {% load static %}
 <div class="container">
-    <div class="row">
+    <div class="row no-gutters">
       <!-- Bootstrap grid classes for different screen sizes -->
       <!-- <div class="col-md-4 col-sm-6">
         <div style="position: relative; overflow: hidden;">
@@ -20,10 +20,9 @@
           <img src="{% static 'images/alternative.jpg' %}" alt="Your Image" style="width: 100%; height: auto; filter: brightness(0.7)">
           <h4 class="p-1" style="position: absolute; top: 85%; right: 2%; transform: translate(0, -50%); z-index: 1; color: white;">Alternative Funds</h4>
           <div class="p-3" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #6658ea; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0">
-            <p style="color: #ffffff;">Sophisticated and diversified investment instruments for the modern-day investor.</p>
+            
             <a href="{% url 'alt-invest' %}" style="color: #ffffff;">
-              Find Out More
-              <span style="display: inline-block; margin-left: 5px;">&#8594;</span>
+              <p style="color: #ffffff;">Sophisticated and diversified investment instruments for the modern-day investor.</p>
             </a>
           </div>
         </div>
@@ -33,10 +32,9 @@
           <img src="{% static 'images/one-prs.jpg' %}" alt="Your Image" style="width: 100%; height: auto; filter: brightness(0.7)">
           <h4 class="p-1" style="position: absolute; top: 85%; right: 6%; transform: translate(0, -50%); z-index: 1; color: white;">OnePRS by Ascente</h4>
           <div class="p-3" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #6658ea; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0">
-            <p style="color: #ffffff;">Add colours to your retirement with our suite of private retirement scheme funds.</p>
+            
             <a href="{% url 'one-rps' %}" style="color: #ffffff;">
-              Find Out More
-              <span style="display: inline-block; margin-left: 5px;">&#8594;</span>
+              <p style="color: #ffffff;">Add colours to your retirement with our suite of private retirement scheme funds.</p>
             </a>
           </div>
         </div>
@@ -46,10 +44,9 @@
           <img src="{% static 'images/one-etf.jpg' %}" alt="Your Image" style="width: 100%; height: auto; filter: brightness(0.7)">
           <h4 class="p-1" style="position: absolute; top: 85%; right: 6%; transform: translate(0, -50%); z-index: 1; color: white;">OneETF by Ascente</h4>
           <div class="p-3" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #6658ea; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0">
-            <p style="color: #ffffff;">A suite of leveraged and inverse exchange-traded funds that are a low cost alternative for portfolio diversification.</p>
+            
             <a href="{% url 'one-etf' %}" style="color: #ffffff;">
-              Find Out More
-              <span style="display: inline-block; margin-left: 5px;">&#8594;</span>
+              <p style="color: #ffffff;">A suite of leveraged and inverse exchange-traded funds that are a low cost alternative for portfolio diversification.</p>
             </a>
           </div>
         </div>
