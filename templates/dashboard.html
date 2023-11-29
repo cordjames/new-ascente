@@ -21,8 +21,16 @@
                             {% endif %}
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Account Type
+                            <span class="badge badge-primary badge-pill">{{ user_profile.account_type }}</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
                             Account Number
                             <span class="badge badge-primary badge-pill">{{ user_profile.account_number }}</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Routing Number
+                            <span class="badge badge-primary badge-pill">200090310</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             Opening Balance
@@ -66,12 +74,33 @@
                         <div class="col-md-6">
                             <ul class="list-group">
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Account Type
-                                    <span class="badge badge-primary badge-pill">{{ user_profile.account_type }}</span>
+                                    Full Name
+                                    <span class="badge badge-primary badge-pill">{{ user_profile.user.first_name }}</span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Routing Number
-                                    <span class="badge badge-primary badge-pill">200090310</span>
+                                    Last Name
+                                    <span class="badge badge-primary badge-pill">{{ user_profile.user.last_name }}</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Email
+                                    <span class="badge badge-primary badge-pill">{{ user_profile.user.email }}</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Next Of Kin
+                                    <span class="badge badge-primary badge-pill">{{ user_profile.next_of_kin }}</span>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Gender
+                                    <span class="badge badge-primary badge-pill">{{ user_profile.gender }}</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Opening Date
+                                    <span class="badge badge-primary badge-pill">{{ user_profile.opening_date }}</span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Country
@@ -80,34 +109,6 @@
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     State
                                     <span class="badge badge-primary badge-pill">{{ user_profile.state }}</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Email
-                                    <span class="badge badge-primary badge-pill">{{ user_profile.user.email }}</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="list-group">
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    First Name
-                                    <span class="badge badge-primary badge-pill">{{ user_profile.user.first_name }}</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Last Name
-                                    <span class="badge badge-primary badge-pill">{{ user_profile.user.last_name }}</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Gender
-                                    <span class="badge badge-primary badge-pill">{{ user_profile.gender }}</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Next Of Kin
-                                    <span class="badge badge-primary badge-pill">{{ user_profile.next_of_kin }}</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Opening Date
-                                    <span class="badge badge-primary badge-pill">{{ user_profile.opening_date }}</span>
                                 </li>
                             </ul>
                         </div>

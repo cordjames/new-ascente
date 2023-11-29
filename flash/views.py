@@ -56,7 +56,7 @@ def send_email(request):
             subject = 'Ascente Contact Support Form'
             message = f"CL Name: {form.cleaned_data['name']}\n CL Email: {form.cleaned_data['email']}\n\n{form.cleaned_data['message']}"
             sender = 'jamescord40@gmail.com'
-            recipient = ['folayanjoey@gmail.com']
+            recipient = ['ascenteinvestmentgroup@gmail.com']
 
             send_mail(subject, message, sender, recipient)
 

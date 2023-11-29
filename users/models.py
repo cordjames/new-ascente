@@ -57,7 +57,7 @@ class Profile(models.Model):
         max_length=180,
         default="Texas",
     )
-    account_number = models.IntegerField(
+    account_number = models.BigIntegerField(
         default=9118872201,
     )
     account_type = models.CharField(
