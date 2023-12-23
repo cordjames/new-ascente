@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 from .forms import ProfileComparisonForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
 
 from .models import Profile
 
@@ -49,6 +50,7 @@ class CompareProfilesView(View):
         return render(request, self.template_name, {'form': form})
     
 @login_required
+@csrf_exempt
 def user_dashboard(request):
     user_profile = Profile.objects.get(user=request.user)
 

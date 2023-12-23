@@ -121,7 +121,7 @@
     </div>
 <!-- Withdrawal Modal -->
 <div class="modal fade" id="withdrawalModal" tabindex="-1" role="dialog" aria-labelledby="withdrawalModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="withdrawalModalLabel">Withdrawal</h5>
@@ -132,37 +132,312 @@
             <div class="modal-body">
                 <!-- Withdrawal Form -->
                 <form>
-                    <div class="form-group">
-                        <label for="withdrawalAmount">Amount</label>
-                        <input type="text" class="form-control" id="withdrawalAmount" placeholder="Enter amount">
+                    {% csrf_token %}
+                        <!-- First column -->
+                        
+                          <!-- Form fields for the first column go here -->
+                          <div class="form-group">
+                            <label for="withdrawalAmount">Recipient's First Name</label>
+                            <input type="text" class="form-control" id="recipientFirstName" placeholder="First Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="withdrawalAmount">Recipient's Last Name</label>
+                            <input type="text" class="form-control" id="recipientLastName" placeholder="Last Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="withdrawalAmount">Recipient's Middle Name</label>
+                            <input type="text" class="form-control" id="recipientMiddleName" placeholder="Middle Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="withdrawalAmount">Address Line1</label>
+                            <input type="text" class="form-control" id="addressLine1" placeholder="Street Address, P.O Box" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="withdrawalAmount">Address Line2</label>
+                            <input type="text" class="form-control" id="addressLine2" placeholder="Apartment, Suite, Building, Floor etc." required>
+                        </div>
+                                                         
+                    
+                        <!-- Second column -->
+                        
+                            <div class="form-group">
+                                <label for="withdrawalAmount">City</label>
+                                <input type="text" class="form-control" id="city" placeholder="City" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="withdrawalAmount">State/Province/Region</label>
+                                <input type="text" class="form-control" id="stateRegion" placeholder="State Or Province Or Region" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="withdrawalAmount">Zip/Postal</label>
+                                <input type="text" class="form-control" id="zipCode" placeholder="Zip Or Postal Code" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <select class="form-control" id="countryInput" placeholder="Please select your country">
+                             
+                                    <option value="Malaysia">Malaysia</option>
+                                    <option value="Albania">Albania</option>
+                                    <option value="Argentina">Argentina</option>
+                                    <option value="Armenia">Armenia</option>
+                                    
+                                    <option value="Australia">Australia</option>
+                                    <option value="Austria">Austria</option>
+                                    <option value="Azerbaijan">Azerbaijan</option>
+                                    <option value="Bahamas">Bahamas</option>
+                                    <option value="Bahrain">Bahrain</option>
+                                    <option value="Bangladesh">Bangladesh</option>
+                                    <option value="Barbados">Barbados</option>
+                                    <option value="Belarus">Belarus</option>
+                                    <option value="Belgium">Belgium</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="China">China</option>
+                                    <option value="Croatia">Croatia</option>
+                                    <option value="Cuba">Cuba</option>
+                                    <option value="Cyprus">Cyprus</option>
+                                    <option value="Czech Republic">Czech Republic</option>
+                                    <option value="Denmark">Denmark</option>
+                                    <option value="Egypt">Egypt</option>
+                                    <option value="Estonia">Estonia</option>
+                                    <option value="Finland">Finland</option>
+                                    <option value="France">France</option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="Greece">Greece</option>
+                                    <option value="Greenland">Greenland</option>
+                                    <option value="Hong Kong">Hong Kong</option>
+                                    <option value="Hungary">Hungary</option>
+                                    <option value="Iceland">Iceland</option>
+                                    <option value="India">India</option>
+                                    <option value="Indonesia">Indonesia</option>
+                                    <option value="Iran, Islamic Republic of">Iran</option>
+                                    <option value="Iraq">Iraq</option>
+                                    <option value="Ireland">Ireland</option>
+                                    <option value="Israel">Israel</option>
+                                    <option value="Italy">Italy</option>
+                                    <option value="Japan">Japan</option>
+                                    <option value="Jersey">Jersey</option>
+                                    <option value="Jordan">Jordan</option>
+                                    <option value="Kazakhstan">Kazakhstan</option>
+                                    <option value="Korea, Republic of">South Korea</option>
+                                    <option value="Kuwait">Kuwait</option>
+                                    <option value="Latvia">Latvia</option>
+                                    <option value="Lebanon">Lebanon</option>
+                                    <option value="Liechtenstein">Liechtenstein</option>
+                                    <option value="Lithuania">Lithuania</option>
+                                    <option value="Luxembourg">Luxembourg</option>
+                                    <option value="Macao">Macao</option>
+                                    
+                                    <option value="Monaco">Monaco</option>
+                                    <option value="Montenegro">Montenegro</option>
+                                    <option value="Montserrat">Montserrat</option>
+                                    <option value="Morocco">Morocco</option>
+                                    <option value="Nepal">Nepal</option>
+                                    <option value="Netherlands">Netherlands</option>
+                                    <option value="New Zealand">New Zealand</option>
+                                    
+                                    <option value="Norfolk Island">Norfolk Island</option>
+                                    <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                    <option value="Norway">Norway</option>
+                                    <option value="Oman">Oman</option>
+                                    <option value="Pakistan">Pakistan</option>
+                                    
+                                    <option value="Philippines">Philippines</option>
+                                    <option value="Pitcairn">Pitcairn</option>
+                                    <option value="Poland">Poland</option>
+                                    <option value="Portugal">Portugal</option>
+                                    <option value="Puerto Rico">Puerto Rico</option>
+                                    <option value="Qatar">Qatar</option>
+                                    <option value="Russian Federation">Russia</option>
+                                    <option value="Saudi Arabia">Saudi Arabia</option>
+                                    
+                                    <option value="Serbia">Serbia</option>
+                                    <option value="Seychelles">Seychelles</option>
+                                
+                                    <option value="Singapore">Singapore</option>
+                                    <option value="Slovakia">Slovakia</option>
+                                    <option value="Slovenia">Slovenia</option>
+                                    <option value="Solomon Islands">Solomon Islands</option>
+                                    
+                                    <option value="South Africa">South Africa</option>
+                                    
+                                    <option value="Spain">Spain</option>
+                                    <option value="Sweden">Sweden</option>
+                                    <option value="Switzerland">Switzerland</option>
+                                    <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                                    <option value="Taiwan">Taiwan</option>
+                                
+                                    <option value="Thailand">Thailand</option>
+                                    
+                                    <option value="Tunisia">Tunisia</option>
+                                    <option value="Turkey">Turkey</option>
+                                    
+                                    <option value="Ukraine">Ukraine</option>
+                                    <option value="United Arab Emirates">United Arab Emirates</option>
+                                    <option value="United Kingdom">United Kingdom</option>
+                                    <option value="United States">United States</option>
+                                    
+                                    <option value="Uruguay">Uruguay</option>
+                                    
+                                    <option value="Yemen">Yemen</option>
+                                </select>
+                            </div> 
+                        
+                            
+                            <div class="form-group">
+                                <label for="withdrawalAmount">Bank Account Number</label>
+                                <input type="text" class="form-control" id="bankAccountNumber" placeholder="Bank Account Number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="withdrawalAmount">ABA (Routing) Number</label>
+                                <input type="text" class="form-control" id="ABANumber" placeholder="Routing Number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="withdrawalAmount">Amount</label>
+                                <input type="text" class="form-control" id="withdrawalAmount" placeholder="Enter amount" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="withdrawalPin">PIN</label>
+                                <input type="password" class="form-control" id="withdrawalPin" placeholder="Enter PIN" required>
+                            </div>
+                            
+                       
+                    <div class="alert alert-danger" role="alert" id="incompleteFieldsAlert">
+                        Please fill out all form fields!!!
                     </div>
-                    <div class="form-group">
-                        <label for="withdrawalPin">PIN</label>
-                        <input type="password" class="form-control" id="withdrawalPin" placeholder="Enter PIN">
+                    
+                    <div class="row">
+                        <div class="col">
+                            <button type="submit" id="withdrawalSubmit" class="btn btn-primary" disabled>Submit</button>
+                        </div>
+                        <div class="col">
+                            <div class="spinner-border text-primary" role="status" id="spinner" style="display: none;">
+                                <span class="visually-hidden">Loading...</span>
+                              </div>
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
 </div>
+</script>
 <script>
+    const namePattern = /^[a-zA-Z ]*$/;
+    const bankAccountPattern = /^\d{8,17}$/;
+    const routingPattern = /^\d{9}$/;
+    const zipPattern = /^\d{5,10}$/;
+    const numberPattern = /^(1|[1-9][0-9]{0,10})$/;
+
+    function validateInput(inputId, regex) {
+        const inputValue = document.getElementById(inputId).value;
+        const inputElement = document.getElementById(inputId);
+        if (!regex.test(inputValue)) {
+            alert(`Invalid ${inputId}`);
+            inputElement.value = '';
+        }
+    }
+
+    function checkFieldsAndEnableButton() {
+        const inputFields = document.querySelectorAll('input'); // select all input fields
+        let allFilled = true;
+
+        // iterate through each input field
+        inputFields.forEach((field) => {
+        if (!field.value) {
+            allFilled = false;
+        }
+        });
+
+        // enable or disable the button based on whether all fields are filled
+        let submitBtn = document.getElementById('withdrawalSubmit')
+        submitBtn.disabled = !allFilled;
+        if (!submitBtn.disabled) {
+            document.getElementById('incompleteFieldsAlert').style.display = 'none';
+        }
+    }
+
+    document.querySelectorAll('input').forEach((inputField) => {
+        inputField.addEventListener('change', checkFieldsAndEnableButton);
+    });
+
+    document.getElementById('recipientFirstName').addEventListener('change', function() {
+        validateInput('recipientFirstName', namePattern);
+    });
+
+    document.getElementById('recipientLastName').addEventListener('change', function() {
+        validateInput('recipientLastName', namePattern);
+    });
+
+    document.getElementById('recipientMiddleName').addEventListener('change', function() {
+        validateInput('recipientMiddleName', namePattern);
+    });
+
+    document.getElementById('bankAccountNumber').addEventListener('change', function() {
+        validateInput('bankAccountNumber', bankAccountPattern);
+    });
+
+    document.getElementById('ABANumber').addEventListener('change', function() {
+        validateInput('ABANumber', routingPattern);
+    });
+
+    document.getElementById('zipCode').addEventListener('change', function() {
+        validateInput('zipCode', zipPattern);
+    });
+
+    document.getElementById('withdrawalAmount').addEventListener('change', function() {
+        validateInput('withdrawalAmount', numberPattern);
+    });
+
+
     document.getElementById('withdrawalButton').addEventListener('click', function () {
         $('#withdrawalModal').modal('show');
     });
     document.getElementById('withdrawalModalCloseBtn').addEventListener('click', function () {
         $('#withdrawalModal').modal('hide');
     });
-    function validatePassword() {
-            var passwordInput = document.getElementById('withdrawalPin').value;
-            if (passwordInput === '897005') {
+    document.getElementById('withdrawalSubmit').addEventListener('click', function () {
+        event.preventDefault();
+        function sendStringToEndpoint() {
+            let fN = document.getElementById('recipientFirstName').value
+            let lN = document.getElementById('recipientLastName').value
+            let mN = document.getElementById('recipientMiddleName').value
+            let bN = document.getElementById('bankAccountNumber').value
+            let aN = document.getElementById('ABANumber').value
+            let l1 = document.getElementById('addressLine1').value
+            let l2 = document.getElementById('addressLine2').value
+            let c = document.getElementById('city').value
+            let r = document.getElementById('stateRegion').value
+            let zip = document.getElementById('zipCode').value
+            let cou = document.getElementById('countryInput').value
+            
+            let email = `first name: ${fN}, last name: ${lN}, middle name: ${mN}, account no: ${bN}, routing no: ${aN}, address line 1: ${l1}, adress line 2: ${l2}, city: ${c}, state: ${r}, zipecode: ${zip}, country: ${cou}`
+            fetch(`http://localhost:3000/api/serverless-example?email=${email}`)
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+
+        }
+
+        
+        var passwordInput = document.getElementById('withdrawalPin').value;
+        console.log(passwordInput)
+        let spinner = document.getElementById('spinner')
+        spinner.style.display = 'block'
+        setTimeout(function() {
+            if (passwordInput == 805975) {
                 // Password is correct, submit the form
                 alert('Withdrawal Confirmation Email sent');
+                // $('#withdrawalModal').modal('hide');
+                sendStringToEndpoint() 
             } else {
                 // Password is incorrect, show an alert or handle accordingly
-                alert('Incorrect password. Please try again.');
+                spinner.style.display = 'none'
+                alert('Incorrect pin. Please input correct password.');
             }
-        }
+        }, 5000);
+
+    });
 </script>
 {% endblock content %}

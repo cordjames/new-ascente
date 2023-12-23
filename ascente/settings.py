@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'flash.apps.FlashConfig',
     'users.apps.UsersConfig',
+    'withdraw.apps.WithdrawConfig',
 ]
 
 MIDDLEWARE = [
